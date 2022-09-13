@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "slick-carousel/slick/slick.css";
 import "./newsletter.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -10,7 +10,7 @@ import img2 from './Picture5.png';
 import img3 from './Picture4.png';
 import img4 from './Picture2.png';
 
-
+import { Data } from './data';
 
 
 
@@ -18,6 +18,12 @@ import img4 from './Picture2.png';
 
 function Newsletters() {
 
+  const placeholder = 'Search For a Question'
+  const [wordEntered, setWordEntered] = useState([]);
+  const [clicked, setClicked] = useState(false);
+  const [filteredData, setfilteredData] = useState([]);
+  const [slideIndex, setslideIndex] = useState(0);
+  const [updateCount, setupdateCount] = useState(0);
 
   var settings = {
     dots: true,
@@ -51,91 +57,100 @@ function Newsletters() {
           slidesToScroll: 1
         }
       }
-    ]
+    ],
+    afterChange: () =>
+    setupdateCount(updateCount + 1),
+    beforeChange: (current, next) => setslideIndex(next)
   };
+  
+  
+  
+  const toggle = index => {
+    if (clicked === index) {
+      //if clicked question is already active, then close it
+      return setClicked(null);
+    }
+    
+    setClicked(index);
+  };
+  
+  const handleFilter = (event) => {
+    const searchWord = event.target.value
+    setWordEntered(searchWord)
+    const newFilter = Data.filter((value) => {
+      return value.Title.toLowerCase().includes(searchWord.toLowerCase());
+    })
+    console.log(slideIndex)
+    
+    if (searchWord === "") {
+      setfilteredData([]);
+    }
+    else {
+      setfilteredData(newFilter);
+    }
+  }
+  
+  const clrinput = ({id}) => {
+    setWordEntered('')
+    setfilteredData([])
+  console.log(Slider.slickGoTo(id))
+}
 
 
-  return (
-    <> <div className="sectionii">
-      
-      
+return (
+  <>
+    <div className="sectionii">
       <div className="texttt">
         <h2 className='h22'>Connect With Us</h2>
         <button className='buttonnews'>Subscribe</button>
-        
-</div>
-<div><MDBCol md="6">
-            <input className="Searchi" type="text" placeholder="Search Newsletter" aria-label="Searchi" />
-          </MDBCol></div>
+
+      </div>
+      <div><MDBCol md="6">
+        <input className="Searchi" type="text" placeholder={placeholder} value={wordEntered} aria-label="Searchii" onChange={handleFilter} />
+        {filteredData.length !== 0 && (
+          <div className="dataResultNewsletter">
+            {filteredData.slice(0, 15).map((value, index) => {
+              return (
+                <div className="dataItemNeewsletter">
+                  <a className="dataItemmNewsletter" onClick={()=>{
+                    clrinput(value)}} href={`#${value.id}`} >
+                    <p>{value.Title} </p>
+                  </a>
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </MDBCol></div>
       <div className='slide'>
 
 
 
 
 
-        <Slider {...settings}>
-          <div className='box'>
-            <div class="card">
-              <div className="card-body">
-                <div><img className="imagei" src={img1} alt="" /></div>
+        <Slider ref={slider => (slider == slider)} {...settings}>
+          {Data.map((item, index) => {
+            return (
+              <>
+                <div className='box' id={item.id}>
+                  <div class="card">
+                    <div className="card-body" >
+                      <div><img className="imagei" src={img1} alt="" /></div>
 
-                <h3 className='h33'>Cancer Prevention Updates</h3>
-                <p className='pp'>Cancer is the second leading cause of death in the United States and is one of the world's most researched diseases.</p>
-              </div>
-            </div>
-          </div>
-          <div className='box'>
-            <div className="card">
-              <div className="card-body">
-                <div className='centimg'><img className="imagei" src={img2} alt="" /></div>
-                <h3 className='h33'>Cancer Prevention Updates</h3>
-                <p className='pp'>In recent years, carbohydrates have developed a bad reputation, creating the perfect opportunity for low or no carb diets to dominate the diet industry.</p>
-              </div>
-            </div>
-          </div>
-          <div className='box'>
-            <div className="card">
-              <div className="card-body">
-
-                <div className='centimg'><img className="imagei" src={img3} alt="" /></div>
-                <h3 className='h33'>Cancer Prevention Updates</h3>
-                <p className='pp'>There's been a significant increase in information about building and boosting a healthy immune system in recent months.</p>
-              </div>
-            </div>
-          </div>
-          <div className='box'>
-            <div className="card">
-              <div className="card-body">
-                <div className='centimg'><img className="imagei" src={img4} alt="" /></div>
-                <h3 className='h33'>Cancer Prevention Updates</h3>
-                <p className='pp'>Cancer is the second leading cause of death in the United States and is one of the world's most researched diseases.</p>
-              </div>
-            </div>
-          </div>
-          <div className='box'>
-            <div className="card">
-              <div className="card-body">
-                <div className='centimg'><img className="imagei" src={img2} alt="" /></div>
-                <h3 className='h33'>Cancer Prevention Updates</h3>
-                <p className='pp'>In recent years, carbohydrates have developed a bad reputation, creating the perfect opportunity for low or no carb diets to dominate the diet industry.</p>
-              </div>
-            </div>
-          </div>
-          <div className='box'>
-            <div className="card">
-              <div className="card-body">
-                <div className='centimg'><img className="imagei" src={img1} alt="" /></div>
-                <h3 className='h33'>Cancer Prevention Updates</h3>
-                <p className='pp'>Cancer is the second leading cause of death in the United States and is one of the world's most researched diseases.</p>
-              </div>
-            </div>
-          </div>
+                      <h3 className='h33'>{item.Title}</h3>
+                      <p className='pp'>{item.Abstract}</p>
+                    </div>
+                  </div>
+                </div>
+              </>
+            );
+          })}
 
         </Slider>
       </div>
     </div>
-    </>
-  );
+  </>
+);
 }
 
 

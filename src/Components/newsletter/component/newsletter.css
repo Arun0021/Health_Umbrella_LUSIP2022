@@ -23,7 +23,7 @@
     align-items: center;
     text-align: center;
     border-radius: 20px;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
     margin-left: 150px;
     margin-top: 20px;
 
@@ -114,4 +114,26 @@ text-align: center;
 
 .slidee{
   margin: 0px 50px 50px 50px;
+}
+
+.dataResultNewsletter{
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+  width: 300px;
+  height: fit-content;
+  max-height: 200px;
+  margin-left: 150px;
+  background-color: aliceblue;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.dataResultNewsletter::-webkit-scrollbar{
+  display: none;
+}
+
+.dataItemNewsletter:hover
+{
+    background-color: lightgray;
+}
+.dataItemmNewsletter:hover{
+    color: #000000;
 }
