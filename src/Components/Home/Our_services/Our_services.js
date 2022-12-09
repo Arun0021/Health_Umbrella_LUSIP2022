@@ -24,38 +24,66 @@ function Our_services() {
       return <ul style={{ margin: " -25px" }}>{dots}</ul>;
     },
   };
-  const data = [{ img: img4, details: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, ullam! Iste quidem soluta error velit. Voluptate, nemo' },
-  { img: img1, details: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, ullam! Iste quidem soluta error velit. Voluptate, nemo' },
-  { img: img2, details: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, ullam! Iste quidem soluta error velit. Voluptate, nemo' },
-  { img:  img3, details: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, ullam! Iste quidem soluta error velit. Voluptate, nemo' },
-  { img:  img4, details: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, ullam! Iste quidem soluta error velit. Voluptate, nemo' },
-  { img: img1, details: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, ullam! Iste quidem soluta error velit. Voluptate, nemo' },
-  { img: img2, details: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, ullam! Iste quidem soluta error velit. Voluptate, nemo' }]
+  const data = [
+    {
+      img: img4,
+      details: "",
+    },
+    {
+      img: img1,
+      details: "",
+    },
+    {
+      img: img2,
+      details: "",
+    },
+    {
+      img: img3,
+      details: "",
+    },
+    {
+      img: img4,
+      details: "",
+    },
+    {
+      img: img1,
+      details: "",
+    },
+    {
+      img: img2,
+      details: "",
+    },
+  ];
   return (
     <div className={`${styles.our_services}`}>
       <div className={`${styles.section}`}>
         <div className={`${styles.textt}`}>
-          <h2>Our Services</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, ullam! Iste quidem soluta error velit. Voluptate, nemo</p>
+          <h2>Our members</h2>
+          <p>Those who are part of our journy.</p>
         </div>
         <div className={`${styles.slide}`}>
           <Slider {...settings}>
-              {data.map((Data) => {
-                return(
-                  <div className={`${styles.box}`}>
+            {data.map((Data) => {
+              return (
+                <div className={`${styles.box}`}>
                   <div className={`${styles.card}`}>
                     <div className={`${styles.cardbody}`}>
                       <div className={`${styles.OurServicesServiceImgWrap}`}>
-                        <img className={`${styles.ServiceImage}`} key={Data.id} src={Data.img} alt="" />
+                        <img
+                          className={`${styles.ServiceImage}`}
+                          key={Data.id}
+                          src={Data.img}
+                          alt=""
+                        />
                       </div>
                       <p className={`${styles.ServicesText}`}>{Data.details}</p>
                     </div>
                   </div>
-                </div>)
-              }
-              )}
-            </Slider>
-            {/* <div className="box">
+                </div>
+              );
+            })}
+          </Slider>
+          {/* <div className="box">
               <div className="card">
                 <div className="card-body">
                   <div className="centimg">

@@ -16,7 +16,7 @@
     display: flex;
     gap: 15px;
     width: 80%;
-    margin-left: 12%;
+    margin-left: 38%;
     
     
    
@@ -30,6 +30,7 @@
     color: #06C1F3;
     text-transform: uppercase;
     padding: 2px;
+
    
    
 }
@@ -47,7 +48,10 @@
     font-weight: 400;
     font-size: 20px;
     color: #ACACAC;
-    padding-left: 85px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 500px;
+
     
    
 }

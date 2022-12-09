@@ -22,6 +22,16 @@
     margin-bottom: 10px;
     /* width: fit-content; */
 }
+.paths_container_type{
+    margin-top: 50px;
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+    /* width: fit-content; */
+}
 
 .heading_pathies{
     display: flex;

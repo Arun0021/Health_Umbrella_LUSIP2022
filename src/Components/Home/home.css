@@ -263,3 +263,56 @@
     height:auto;
     margin-bottom: 10px;
 } */
+
+
+.icon-bar {
+    position: fixed;
+    top: 80%;
+     -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 9;
+   
+  }
+  
+  .icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  
+  .icon-bar a:hover {
+    background-color: #000;
+  }
+  
+  .ask_suggestion {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .share_experience {
+    background: #8abce3;
+    color: white;
+  }
+  .contact_uss{
+    background: #3f94d4;
+    color: white;
+  }
+  
+  
+  
+  .feedback {
+    background: #61c8f8;
+    color: white;
+  }
+  
+
+  
+  .content {
+    margin-left: 75px;
+    font-size: 30px;
+  }

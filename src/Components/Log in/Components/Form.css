@@ -32,7 +32,7 @@
 
 .prabhav .prabhav1 .form .fields input{
     display: block;
-    width: 75%;
+    width: 45%;
     padding: 10px;
     outline: none;
     border: none;
@@ -50,7 +50,7 @@
     display: block;
     background: #3CBBF3;
     border-radius: 14px;
-    width: 70%;
+    width: 21%;
     margin: 50px auto 20px auto;
     border: none;
     outline: none;
