@@ -1,0 +1,95 @@
+.detailcard-container{
+    background-color: #D1FAFF87;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+
+    padding-top: 50px;
+    padding-bottom: 60px;
+
+    width: 100vw;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+@media screen and (max-width: 992px){
+    .detailcard-container{
+        gap: 2.5rem;
+    }
+    .personaldetails_info{
+        font-size: 1rem;
+    }
+    .personaldetails_heading{
+        font-size: 1.5rem;
+    }
+    .reportdetails_info{
+        font-size: 1rem;
+    }
+    .reportdetails_heading{
+        font-size: 1.5rem;
+    }
+    .personaldetails_info{
+        line-height: 25px;
+        margin-left: 25px;
+    }
+    .reportdetails_info{
+        line-height: 25px;
+        margin-left: 25px;
+    }
+}
+
+/* 
+@media screen and (max-width: 992px){
+    .detailcard-container{
+        gap: 1.5rem;
+    }
+    .personaldetails_info{
+        font-size: .8rem;
+    }
+    .personaldetails_heading{
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+    .reportdetails_info{
+        font-size: .8rem;
+    }
+    .reportdetails_heading{
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+    .personaldetails_info{
+        line-height: 20px;
+        margin-left: 20px;
+    }
+    .reportdetails_info{
+        line-height: 20px;
+        margin-left: 20px;
+    }
+
+    .personaldetails_card{
+        height:400px;
+    }
+    .reportdetails_card{
+        height: 400px;
+    }
+} */
+
+@media screen and (max-width: 992px){
+    .detailcard-container{
+        flex-direction: column;
+    }
+    .personaldetails_card{
+        width: 100%;
+        height: fit-content;
+    }
+    .reportdetails_card{
+        width: 100%;
+        height: fit-content;
+    }
+    .personaldetails_info{
+        margin-bottom: 50px;
+    }
+    .reportdetails_info{
+        margin-bottom: 50px;
+    }
+}

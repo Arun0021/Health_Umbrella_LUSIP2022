@@ -1,0 +1,38 @@
+.case-overview-header{
+    width: 100vw;
+    background-color: #D1FAFF87;
+    background-image: url(./images/background_image_eclipse1.png), url(./images/background_image_eclipse2.png);
+    background-position: left top, right top;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 58% 150%,20% 35%;
+    padding-bottom: 50px;
+}
+@media (max-width: 500px){
+    .case-overview-header{
+        background-position: left bottom, right top;
+        background-size: 58% 80%,50% 50%;
+    }
+}
+.case-overview-header .banner{
+    margin: auto;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.case-overview-header .banner h1{
+    font-weight: 700;
+    font-size: 3em;
+    margin-top: 50px;
+}
+.case-overview-header .banner img{
+    width: 580px;
+    margin-top: 20px;
+}
+@media (max-width: 768px) {
+    .case-overview-header .banner h1{
+        font-weight: 700;
+        font-size: 2em;
+    }
+    .case-overview-header .banner img{
+        width: 70vw;
+    }
+}

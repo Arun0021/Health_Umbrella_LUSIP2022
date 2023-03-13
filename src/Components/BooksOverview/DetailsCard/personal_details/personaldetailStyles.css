@@ -1,0 +1,45 @@
+.personaldetails_card{
+    background-color: #ffffff;
+    width: fit-content;
+    border-radius: 41px;
+    box-shadow: 0px 7px 6px 5px rgba(28, 27, 27, 0.25);
+
+    width: 50%;
+    height: 500px;
+
+    /*used linear grading to set opactiy*/
+    background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)),url('./detailsBkg.png');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+}
+
+.personaldetails_heading{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    /* font-size: 28px; */
+    font-size: 2rem;
+    line-height: 42px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration-line: underline;
+
+    margin-bottom: 50px;
+    margin-top: 25px;
+}
+
+.personaldetails_info{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 32px;
+    
+    text-align: left;
+    margin: 3px;
+    margin-left:50px
+}

@@ -1,0 +1,116 @@
+.caseCard-div{
+    background-color: #D1FAFF87;
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
+.caseCard-div h2{
+    margin-left: 7%;
+    margin-bottom: 30px;
+    text-decoration: underline;
+}
+.caseCard{
+    width: 90vw;
+    margin: auto;
+    background-color: white;
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0px 3px 5px rgba(130, 130, 130, 0.645);
+}
+.caseCard .top{
+    display: flex;
+    margin-bottom: 10px;
+}
+.caseCard .bottom{
+    display: flex;
+}
+.caseCard .top .left{
+    width: 60%;
+    padding-right: 50px;
+}
+.caseCard .top .right{
+    width: 40%;
+    display: flex;
+}
+.caseCard .top .right img{
+    width: 85%;
+    margin: auto;
+}
+.caseCard .bottom .left{
+    width: 50%;
+    padding-right: 1%;
+}
+.caseCard .bottom .right{
+    width: 50%;
+    border-left: 1px solid black;
+    padding-left: 1%;
+}
+.caseCard .top .left p{
+    font-size: 1.2em;
+}
+.caseCard .bottom .left p{
+    font-size: 1.2em;
+}
+.caseCard .bottom .right p{
+    font-size: 1.2em;
+}
+.caseCard .bottom .left p span, .caseCard .bottom .right p span{
+    font-size: 1.3em;
+    font-weight: 500;
+    padding-right: 20px;
+}
+@media (min-width: 850px) and (max-width: 992px){
+    .caseCard .top .left{
+        width: 50%;
+        padding-right: 0px;
+    }
+    .caseCard .top .right{
+        width: 50%;
+        display: flex;
+    }
+    .caseCard .top .left p{
+        font-size: 1em;
+    }
+    .caseCard .bottom .left p{
+        font-size: 1em;
+    }
+    .caseCard .bottom .right p{
+        font-size: 1em;
+    }
+    .caseCard .bottom .left p span, .caseCard .bottom .right p span{
+        font-size: 1.2em;
+        font-weight: 500;
+        padding-right: 20px;
+    }
+}
+@media (max-width: 850px){
+    .caseCard .top .left{
+        width: 100%;
+        padding-right: 0px;
+    }
+    .caseCard .top .right{
+        display: none;
+    }
+    .caseCard .bottom{
+        display: block;
+    }
+    .caseCard .bottom .left{
+        width: 100%;
+    }
+    .caseCard .bottom .right{
+        width: 100%;
+        border-left: none;
+        padding-left: 0px;
+    }
+    .caseCard .top .left p{
+        font-size: 1em;
+    }
+    .caseCard .bottom .left p{
+        font-size: 1em;
+    }
+    .caseCard .bottom .right p{
+        font-size: 1em;
+    }
+    .caseCard .bottom .left p span, .caseCard .bottom .right p span{
+        font-size: 1.2em;
+    }
+}
